@@ -1,0 +1,70 @@
+---
+title: 	Free Bankruptcy in Las Vegas
+lastmod: 2019-07-14
+priority: 0.8
+type: AboutPage
+site_description: "Free Bankruptcy in Las Vegas"
+---
+<%#  %>
+<%= partial("partials/parts/small-hero", :locals => {   
+    :backgroundImage => "/images/site/what-bankruptcy-costs-and-how-to-pay-for-it.jpg", 
+    :header => "Free Bankruptcy in Las Vegas", 
+    :subHeader => "We all need help from time to time, and when that time comes.  I bet the last thing you want to think about is paying for bankruptcy?  That is why we are offering free bankruptcy to the residents of Nevada. "
+}) %>
+<%#  %>
+<%# <%= partial "partials/parts/as-seen-on" %>
+<%#  %>
+<section class="wrap">
+    <div class="flex justify-center flex-wrap items-center pv4">
+        <%#  %>
+        <div class="w-100 w-50-ns pr4-ns pr0">
+            <img class="" src="/images/site/Jesse-Keenan-Working-On-Saving-A-Home.jpg" alt="We Save Homes" title="About We Save Homes"/>
+        </div>
+        <%#  %>
+        <div class="flex justify-center flex-column w-100 w-50-ns pv4 ph2">
+            <h3 class="f2 mb0">
+                Jesse Keenan wants to help you!
+            </h3>
+            <p class="lh-copy f4">
+                Do you have time money for bankruptcy?  I know most people that are thinking about filling do not, and to make matters worse for them.  There are a lot of companies that want to charge thousands of dollars for what we can do for free. 
+            </p>
+            <%= current_link_to "Schedule a Free Consultation", data.links.page_consultation, class: " pv3 ph4 f3", title: "Free Consultation", aria_current: "current" %>
+        </div>
+    </div>
+</section>
+<%#  %>
+<%#  %>
+<%#  %>
+
+<section class="wrap">
+    <div class="flex flex-wrap justify-center pb4">
+        <div class="w-100">
+            <h3 class="f1 tc mv3">
+                YES! I did say free bankruptcy! 
+            </h3>
+            <p class="f3 tc mv3">
+                Use the form below to contact me.<br> 
+                You can also text or call today <%= current_link_to data.site.site_phone, "sms:" + data.site.site_phone, class: "red", title: "Text Us Today" %>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="wrap wrap-md">
+    <div class="flex flex-wrap justify-center pb4">
+        <div class="w-100">
+            <div class="shadow-1 pa3">
+                <%= partial "partials/parts/contact_form" %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="mb4">
+    <%= partial "partials/home/steps" %>
+</div>
+<%#  %>
+<%#  %>
+<%#  %>
+<%= partial "partials/banner/banner01" %>
+ 
+ 

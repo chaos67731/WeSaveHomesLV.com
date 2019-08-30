@@ -1,0 +1,25 @@
+<h3 class="mv2 dark-gray f3">
+    Featured Post 
+</h3>
+ <% blog.articles.select {|a| a.data[:featured] }.each do |article| %>
+    <div class="mb4 bb b--moon-gray">
+        <h4 class="mb1">
+            <%= link_to article.title, article, class: "dark-gray" %>
+        </h4>
+        <div style="height: 100px;">
+            <%= image_tag article.data.img || "/images/logo.png", :class => 'object-cover', :title => article.title %>
+        </div>
+        <div class="lh-copy mb3">
+            <%=h truncate(article.data.excerpt, :length => 90) %>
+        </div>
+        <div class="tr mb3">
+            <%= link_to "read more »", article , :class => 'glow'%>
+        </div>
+    </div>
+<% end %>
+
+<%# List and link to tags - removed  %>
+<%# <% blog.tags.each do |tag, articles| %>
+<%# <%= link_to "#{tag} (#{articles.size})", tag_path(tag) %>
+<%# <% end %>
+ 

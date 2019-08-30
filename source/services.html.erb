@@ -1,0 +1,96 @@
+---
+title: 	Services - We Save Homes 
+lastmod: 2019-07-14
+priority: 0.8
+type: AboutPage
+site_description: "Services - Free Bankruptcy & Jesse Keenan"
+---
+<%#  %>
+<%= partial("partials/parts/small-hero", :locals => {   
+    :backgroundImage => "/images/site/home-in-las-vegas.jpg", 
+    :header => "Services We Offer", 
+    :subHeader => "Here are some of the services we offer to residence of the Las Vegas valley."
+}) %>
+<%#  %>
+<%# <%= partial "partials/parts/as-seen-on" %>
+<%#  %>
+<section class="wrap">
+    <div class="flex justify-center flex-wrap items-center pv4">
+        <%#  %>
+        <div class="w-100 w-50-ns pr4-ns pr0">
+            <img class="object-cover" src="/images/site/helping-hand.jpg" alt="Filing Bankruptcy for FREE" title="Filing Bankruptcy for FREE"/>
+        </div>
+        <%#  %>
+        <div class="flex justify-center flex-column w-100 w-50-ns pv4 ph2">
+            <h3 class="f2 mb0">
+                Filing Bankruptcy for FREE
+            </h3>
+            <p class="lh-copy f4">
+                We offer free filling of bankruptcy so that you can focus on your family and life.  Without the stress of coming up with the money to save your home,  we know you will be able to enjoy life a little bit more. 
+            </p>
+            <%= current_link_to "Schedule a Free Consultation", data.links.page_consultation, class: " pv3 ph4 f3", title: "Free Consultation", aria_current: "current" %>
+        </div>
+    </div>
+</section>
+<%#  %>
+<%#  %>
+<%#  %>
+
+<section class="wrap">
+    <div class="flex flex-wrap justify-center pb4">
+        <div class="w-100">
+            <h3 class="f1 tc mv3">
+                Other Services We Offer
+            </h3>
+        </div>
+    </div>
+</section>
+
+<section class="wrap">
+    <div class="flex justify-center flex-wrap items-center pv4">
+        <%#  %>
+        <div class="w-100 w-50-ns pr4-ns pr0">
+            <img class="object-cover" src="/images/site/refinance-your-home.jpg" alt="refinance your property" title="refinance your property"/>
+        </div>
+        <%#  %>
+        <div class="flex justify-center flex-column w-100 w-50-ns pv4 ph2">
+            <h3 class="f2 mb0">
+                We can refinance your property.
+            </h3>
+            <p class="lh-copy f4">
+                Sometimes the best option is to refinance, but many people have a problem doing so while they are already in over their head.  That is why we offer a non-credit-driven option.
+            </p>
+            <%= current_link_to "Schedule a Free Consultation", data.links.page_consultation, class: " pv3 ph4 f3", title: "Free Consultation", aria_current: "current" %>
+        </div>
+    </div>
+</section>
+
+<section class="wrap">
+    <div class="flex justify-center flex-row-reverse flex-wrap items-center pv4">
+        <%#  %>
+        <div class="w-100 w-50-ns pr4-ns pr0">
+            <img class="object-cover" src="/images/site/for-sale.png" alt="refinance your property" title="refinance your property"/>
+        </div>
+        <%#  %>
+        <div class="flex justify-center flex-column w-100 w-50-ns pv4 ph2">
+            <h3 class="f2 mb0">
+                We can sell the property as a short sale, offer cash or do a normal sale if we have the time.
+            </h3>
+            <p class="lh-copy f4">
+                No one ever wants to sell their home, but sometimes its the best option to get out of debt. We offer a few different options when it comes to selling your home.  We can do a shot sell or even offer you cash and give you more time to find a new place to live. 
+            </p>
+            <%= current_link_to "Schedule a Free Consultation", data.links.page_consultation, class: " pv3 ph4 f3", title: "Free Consultation", aria_current: "current" %>
+        </div>
+    </div>
+</section>
+
+
+<div class="mb4">
+    <%= partial "partials/home/steps" %>
+</div>
+<%#  %>
+<%#  %>
+<%#  %>
+<%= partial "partials/banner/banner01" %>
+ 
+ 

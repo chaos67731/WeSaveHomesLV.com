@@ -1,0 +1,37 @@
+<% page_articles.each_with_index do |article, i| %>
+    <article class="mb4">
+        <%#  %>
+        <div class="blog-date">
+            <div class="flex">
+                <time class="white bg-blue ph3 pv2 f6">
+                    <%= article.date.strftime('%b %e %Y') %>
+                </time>
+            </div>            
+        </div>
+        <%#  %>
+        <header class="">
+            <h2 class="mv2 dark-gray f3">
+                <%= link_to article.title, article, class: "dark-gray" %> 
+            </h2>
+            <%#  %>
+            <div class="mb2">
+                <span class="light-silver">Posted by:</span> <span class="blue"><%= article.data.author || "We Save Homes" %></span>
+            </div>  
+        </header>
+        <%#  %>
+        <div class="mb2">
+            <%= image_tag article.data.img || "/images/logo.png", :class => 'object-cover max-h-250', :title => article.title %>
+        </div>      
+        <%#  %>
+        <summary class="fw3 bb b--moon-gray">
+            <div class="lh-copy">
+                <%= article.data.excerpt || article.summary(250) %>
+            </div>
+            <div class="flex justify-end mb3 mt3">
+                <%= link_to "keep reading", article , :class => 'btn btn-d pv2 ph4 nowrap', title: "Keep Reading: " + article.title%>
+            </div>
+        </summary>
+        <%#  %>
+        
+    </article>
+<% end %>

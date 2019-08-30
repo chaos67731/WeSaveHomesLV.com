@@ -1,0 +1,59 @@
+---
+title: 	We Save Home Videos
+lastmod: 2019-07-14
+priority: 0.8
+type: AboutPage
+site_description: "We Save Home Videos"
+---
+<%#  %>
+<%= partial("partials/parts/small-hero", :locals => {   
+    :backgroundImage => "/images/site/home-in-las-vegas.jpg", 
+    :header => "We Save Homes Videos", 
+    :subHeader => "To help you get an idea of the type of service we offer, here are some videos. "
+}) %>
+<%#  %>
+<%# <%= partial "partials/parts/as-seen-on" %>
+<%#  %>
+<section class="wrap">
+    <div class="flex justify-center flex-wrap items-center pv4">
+        <%#  %>
+        <% data.videos.videos.each do |f| %>
+            <div class="w-100 w-50-ns pa3">
+                <h3>
+                    <%= f.title %>
+                </h3>
+                <div class="ResponsiveMedia">
+                    <div class="YouTubeLazyLoad" data-id="<%= f.vid %>">
+                    </div>
+                </div>
+            </div>
+        <% end %> 
+        <%#  %>
+    </div>
+</section>
+<%#  %>
+<%#  %>
+<%#  %>
+
+<section class="wrap">
+    <div class="flex flex-wrap justify-center pb4">
+        <div class="w-100">
+            <h3 class="f1 tc mv3">
+                Need help with a foreclosure?  
+                <br>
+                Contact us today with the form below.
+            </h3>
+            <div class="shadow-1 pa3">
+                <%= partial "partials/parts/contact_form" %>
+            </div>
+        </div>
+    </div>
+</section>
+<%#  %>
+
+<%#  %>
+<%#  %>
+<%#  %>
+<%= partial "partials/banner/banner01" %>
+ 
+ 

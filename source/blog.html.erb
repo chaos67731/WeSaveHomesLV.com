@@ -1,0 +1,36 @@
+---
+pageable: true
+title: "Blog - We Save Homes"
+site_description: "We Save Homes"
+lastmod: 2019-04-22
+priority: 0.7
+changefreq: weekly
+---
+<%#  %>
+<%= partial("partials/parts/small-hero", :locals => {   
+    :backgroundImage => "/images/banner/save-your-home.jpg", 
+    :header => "We Save Homes - Blog", 
+    :subHeader => "" 
+}) %>
+<%#  %>
+<br>
+<br>
+<br>
+<div class="wrap pt4 mt-n7 bg-white shadow-1">
+  <div class="flex flex-wrap mb4">
+    <main class="w-100 w-70-ns pr4-ns">
+        <%= partial "partials/blog/basic-small-post" %>
+        <% if paginate %>
+          <div class="flex">
+              <%= partial "partials/blog/blog-paginate" %>
+          </div>
+        <% end %>         
+    </main>
+    <aside class="w-100 w-30-ns pa3 mb4 bg-near-white">
+      <div class="sticky" style="top:75px;">
+        <%= partial "partials/blog/blog-sidebar-1" %>
+      </div>
+    </aside>        
+  </div>
+</div>
+<%= partial "partials/banner/banner01" %>

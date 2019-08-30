@@ -1,0 +1,29 @@
+// sass assets/css/scss/style.scss /assetscss/style.css
+// npm run start
+// import tachyons & Normalize
+@import "tachyons";
+@import "base/helper-tachyons";
+
+// Mixins
+@import "mixin/queries";
+@import "mixin/object-fit";
+// Base
+@import "base/site";
+@import "base/typography";
+@import "base/buttons";
+@import "base/list";
+@import "base/icon";
+@import "base/form";
+@import "base/box-shadow-grid";
+
+// Custom Helpers
+@import "base/all-over";
+//
+@import "parts/site-header";
+@import "parts/hero";
+@import "parts/about";
+@import "parts/partners";
+@import "parts/home-steps";
+
+// Testing
+@import "test";

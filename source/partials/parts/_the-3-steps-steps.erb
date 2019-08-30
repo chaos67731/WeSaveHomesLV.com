@@ -1,0 +1,61 @@
+
+    <div class="flex justify-center mb4">
+        <div class="w-100 w-90-m w-90-ns flex flex-wrap justify-center">
+            <div class="w-100 w-33-m w-33-ns order-0 order-0-ns">
+                <div class="ph2 image-wrap icon-md-auto flex h-100 ">
+                    <div class="bg-washed-blue br4 ac w-100 tc">
+                        <img class="lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/images/svg/contact.svg" alt="Contact Us" title="Contact Us">
+                    </div>
+                </div>
+            </div>
+            <%#  %>
+            <div class="w-100 w-33-m w-33-ns order-3 order-1-ns">
+                <div class="ph2 image-wrap icon-md-auto flex h-100 ">
+                    <div class="bg-washed-blue br4 ac w-100 tc">
+                        <img class="lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/images/svg/meeting.svg" alt="Meeting" title="Meeting">
+                    </div>
+                </div>
+            </div>
+            <%#  %>
+            <div class="w-100 w-33-m w-33-ns order-6 order-2-ns">
+                <div class="ph2 image-wrap icon-md-auto flex h-100 ">
+                    <div class="bg-washed-blue br4 ac w-100 tc">
+                        <img class="lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/images/svg/goal.svg" alt="Fresh Start" title="Fresh Start">
+                    </div>
+                </div>
+            </div>
+            <%#  %>
+            <div class="w-100 order-5"></div>
+            <%#  %>
+            <div class="w-100 w-33-m w-33-ns order-1 order-6-ns box-shadow-grid-first">
+                <div class="tc ph4 pv4 fw4 f5">
+                    <h4 class="mt0 f3">Contact Us</h4> 
+                    <p>
+                        Send us a text or email to take the first step!
+                    </p>
+                    <p>
+                    <%= current_link_to " " + data.site.site_phone, "sms:" + data.site.site_phone, class: "red", title: "Text Us Today" %>
+                    </p>
+                </div>
+            </div>
+            <%#  %>
+            <div class="w-100 w-33-m w-33-ns order-4 order-7-ns box-shadow-grid-center">
+                <div class="tc ph4 pv4 fw4 f5">
+                    <h4 class="mt0 f3">Meeting</h4>
+                    <p>
+                        We will have a 30-minute meeting to go over what is happening and the options you have.
+                    </p>
+                </div>
+            </div>
+            <%#  %>
+            <div class="w-100 w-33-m w-33-ns order-7 order-8-ns box-shadow-grid-last">
+                <div class="tc ph4 pv4 fw4 f5">
+                    <h4 class="mt0 f3">Fresh Start</h4>
+                    <p>
+                        After reviewing your options, and acting on what fits your needs the best. You will be able to have a fresh start. 
+                    </p>
+                </div>
+            </div>
+            <%#  %>
+        </div>
+    </div>    

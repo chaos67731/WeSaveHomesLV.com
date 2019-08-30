@@ -1,0 +1,69 @@
+<footer class="pv4 bg-white footer">
+  <div class="wrap">
+    <div class="flex flex-wrap justify-between">
+      <%#  %>
+      <div class="w-100 w-50-m w-25-ns flex flex-column items-center items-center-m  items-start-ns">
+        <div class="tc tc-m tl-ns ph4">
+          <h3>Text, Call or Email</h3>
+          <%= current_link_to "Email: " + data.site.site_email, "mailto:" + data.site.site_email, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Call Us Today" %>  
+          <%= current_link_to "Text: " + data.site.site_phone, "sms:" + data.site.site_phone, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Call Us Today" %>  
+          <%= current_link_to "Call: " + data.site.site_phone, "tel:" + data.site.site_phone, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Call Us Today" %>  
+        </div>
+      </div>
+      <%#  %>
+      <div class="w-100 w-50-m w-25-ns flex flex-column items-center items-center-m  items-start-ns">
+        <h3>Contact Us</h3>
+        <nav class="tc tc-m tl-ns flex flex-column">
+          <%= current_link_to "Contact Form", data.links.page_contact, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Contact Us" %>
+          <%= current_link_to "Free Consultation", data.links.page_consultation, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Free Consultation" %>
+        </nav>
+      </div>
+      <%#  %>
+      <div class="w-100 w-50-m w-25-ns flex flex-column items-center items-center-m  items-start-ns">
+        <h3>Help</h3>
+        <nav class="tc tc-m tl-ns flex flex-column">
+          <%= current_link_to "FAQs", data.links.page_faq, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "FAQs", aria_current: "current" %>
+          <%= current_link_to "Videos", data.links.page_videos, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Videos", aria_current: "current" %>
+          <%= current_link_to "Free Bankruptcy", data.links.page_free_bankruptcy, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Free Bankruptcy", aria_current: "current" %>
+        </nav>        
+      </div>
+      <%#  %>
+      <div class="w-100 w-50-m w-25-ns flex flex-column items-center items-center-m  items-start-ns">
+        <h3>Information</h3>
+        <nav class="tc tc-m tl-ns flex flex-column">
+          <%= current_link_to "Services", data.links.page_services, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Services", aria_current: "current" %>
+          <%= current_link_to "About Us", data.links.page_about, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "About Us", aria_current: "current" %>
+          <%= current_link_to "Blog", data.links.page_blog, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Blog", aria_current: "current" %>
+        </nav>        
+      </div> 
+      <%#  %>
+    </div>
+  </div>
+  <%#  %>
+  <div style="border-top: 1px solid #ccc;" class="mt4">
+    <div class="wrap w-100">
+      <div class="flex flex-wrap justify-between pt4">
+        <%#  %>
+        <div class="w-100 w-33-m w-33-ns tc tl-ns mb3 mb0-ns">
+          © <%= Date.today.year %> <%= data.site.site_name %> - All Rights Reserver
+        </div>
+        <%#  %>
+        <div class="w-100 w-33-m w-33-ns tc mb3 mb0-ns">
+          <%= data.site.site_address %>
+        </div>
+        <%#  %>
+        <div class="w-100 w-33-m w-33-ns tc tr-ns">
+          <%= current_link_to "Privacy Policy", data.links.page_privacy, title: "Privacy Policy" , class: "mid-gray fw3" %>
+          <span> | </span>
+          <%= current_link_to "Terms of Service", data.links.page_terms, title: "Terms of Service" , class: "mid-gray fw3" %>
+        </div>
+        <%#  %>
+        <div class="w-100 mt4">
+            <p class="ac tc lh-copy fw5 w-100 ma0 small gray">
+              We are not a law firm or attorneys
+            </p>
+          </div>        
+      </div>
+    </div>
+  </div>
+</footer>

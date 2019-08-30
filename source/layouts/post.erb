@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= partial "partials/site/meta" %>
+    <title><%= current_page.data.title || "We Save Homes" %></title>
+    <%= stylesheet_link_tag "style.css?v=" + data.site.version_number  %>
+    <%# = javascript_include_tag "script" %>
+    <%= partial "partials/site/scripts" %>
+  </head>
+  <body class="body">
+    <%= partial "partials/nav" %>
+    <%#  %>
+    <div class="wrap pt4 ">
+      <div class="flex flex-wrap mb4">
+        <main class="w-100 w-70-ns pr4-ns">
+            <%#  %>
+            <div class="blog-date">
+                <div class="flex">
+                    <time class="white bg-blue ph3 pv2 f6">
+                        <%= current_page.date.strftime('%b %e %Y') %>
+                    </time>
+                </div>            
+            </div>
+            <%#  %>
+            <header class="">
+                <h1 class="mv2 dark-gray f3">
+                    <%= current_page.data.title %> 
+                </h1>
+                <%#  %>
+                <div class="mb2">
+                    <span class="light-silver">Posted by:</span> <span class="blue"><%= current_page.data.author || "We Save Homes" %></span>
+                </div>  
+            </header>
+            <%#  %>
+            <div class="mb2">
+                <%= image_tag current_page.data.img || "/images/logo.png", :class => 'object-cover max-h-350', :title => current_page.title %>
+            </div>   
+            <%#  %>
+            <div class="lh-copy">
+              <%= yield %>
+            </div>
+            <div class="bt bb mt4">
+              <h4>Author: <%= current_page.data.author || 'We Save Homes' %></h4>
+              <h4>Posted on: <time><%= current_page.date.strftime('%b %e %Y') %></time></h4>
+              <%# <% current_page.tags.each do |tag| %>
+              <%# <%= link_to tag, tag_path(tag) %>
+              <%# <% end %>
+            </div>
+            <% if defined?current_page.data.comments & current_page.data.comments === "false" %>
+            <% else %>
+              <div class="mb4">
+                <h2>Comments About: <%= current_page.data.title %> </h2>
+                <%= partial "partials/parts/comments" %>
+              </div>
+            <% end %>
+        </main>
+        <aside class="w-100 w-30-ns pa3 bg-near-white">
+          <div class="sticky" style="top:75px;">
+            <%= partial "partials/blog/blog-sidebar-1" %>
+          </div>
+        </aside>        
+      </div>
+    </div>
+    <div class="dn db-ns">
+      <%= partial "partials/banner/banner01" %>
+    </div>
+    <%#  %>
+    <%= partial "partials/footer" %>
+    <%= partial "partials/after-footer" %>
+  </body>
+</html>

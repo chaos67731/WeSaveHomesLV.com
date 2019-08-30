@@ -1,0 +1,29 @@
+<div class="flex justify-between w-100 mb4">
+    <%#  %>
+    <div>
+        <% if prev_page %>
+            <span>
+                <%= link_to 'Previous', prev_page, :class => 'bg-dark-red pa3 white' %>
+            </span>
+        <% end %>
+    </div>
+    <%#  %>
+    <div>
+        <% if paginate && num_pages > 1 %>
+            <div>
+                Page <%= page_number %> of <%= num_pages %>
+            </div>
+        <% end %>
+    </div>
+    <%#  %>
+    <div>
+        <% if paginate %>
+            <% if next_page %>
+                <span>
+                    <%= link_to 'Next', next_page, :class => 'bg-dark-red pa3 white' %>
+                </span>
+            <% end %>
+        <% end %>
+    </div>
+    <%#  %>
+</div>

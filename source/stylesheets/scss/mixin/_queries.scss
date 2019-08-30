@@ -1,0 +1,49 @@
+// Basic
+// Use
+/*
+@include break(not-small) {
+    // Here
+}
+*/
+@mixin break($point) {
+  @if $point == not-small {
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  } @else if $point == small {
+    @media screen and (max-width: 48em) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media screen and (min-width: 48em) and (max-width: 64em) {
+      @content;
+    }
+  } @else if $point == medium-under {
+    @media screen and (max-width: 64em) {
+      @content;
+    }
+  } @else if $point == large {
+    @media screen and (min-width: 64em) {
+      @content;
+    }
+  }
+}
+
+// Mobile Only
+// Use
+/*
+@include mobilebreak(is-mobile) {
+    // Here
+}
+*/
+@mixin mobilebreak($mobile) {
+  @if $mobile == is-mobile {
+    @media only screen and (max-device-width: 1024px) {
+      @content;
+    }
+  } @else if $mobile == not-mobile {
+    @media only screen and (min-device-width: 1024px) {
+      @content;
+    }
+  }
+}

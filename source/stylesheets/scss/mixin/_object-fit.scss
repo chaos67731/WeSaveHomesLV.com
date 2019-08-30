@@ -1,0 +1,25 @@
+// @include object-fit(cover) {
+//     // Here
+// }
+
+@mixin object-fit($how) {
+  object-fit: $how;
+  width: 100%;
+  height: 100%;
+  @content;
+}
+// Most Used - Save time / No need to add classes
+.object-cover {
+  @include object-fit(cover) {
+  }
+}
+.object-fill {
+  @include object-fit(fill) {
+  }
+}
+.object-contain,
+.object-contain svg,
+.object-contain img {
+  @include object-fit(contain) {
+  }
+}

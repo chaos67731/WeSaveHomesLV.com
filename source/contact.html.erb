@@ -1,0 +1,56 @@
+---
+title: 	Contact We Save Homes
+lastmod: 2019-07-14
+priority: 0.8
+type: AboutPage
+site_description: "Contact We Save Homes"
+---
+<%#  %>
+<%= partial("partials/parts/small-hero", :locals => {   
+    :backgroundImage => "/images/site/home-in-las-vegas.jpg", 
+    :header => "Contact We Save Homes", 
+    :subHeader => "If you have any questions, or want us to contact you.  Fill out the form below."
+}) %>
+<%#  %>
+<%# <%= partial "partials/parts/as-seen-on" %>
+<%#  %>
+<section class="wrap">
+    <div class="flex justify-center flex-wrap  pv4">
+        <%#  %>
+        <div class="w-100 w-50-ns pr4-ns pr0">
+            <h2 class="f2 tc">
+                Jesse Keenan
+            </h2>
+            <p class="lh-copy f3">Contact us today so we can start making a game plan and helping you save your home from foreclosure</p>
+            <img class="" src="/images/site/Jesse-Keenan-Working-On-Saving-A-Home.jpg" alt="We Save Homes" title="Contact We Save Homes"/>
+            <h2 class="f3 mb0">
+                Broker/Salesman/Invester
+            </h2>
+            <h2 class="f3 mb0">
+                Call or text me at: <br>
+                <span class="blue"><%=data.site.site_phone  %> </span>
+            </h2>
+            <h2 class="f3 mb0">
+                Email me at: <br>
+                <span class="blue"><%=data.site.site_email  %></span>
+            </h2>            
+        </div>
+        <%#  %>
+        <div class="flex justify-center flex-column w-100 w-50-ns pv4 ph2">
+            <div class="shadow-1 pa3">
+                <%= partial "partials/parts/contact_form" %>
+            </div>
+        </div>
+    </div>
+</section>
+<%#  %>
+<%#  %> 
+<div class="mb4">
+    <%= partial "partials/home/steps" %>
+</div>
+<%#  %>
+<%#  %>
+<%#  %>
+<%= partial "partials/banner/banner01" %>
+ 
+ 

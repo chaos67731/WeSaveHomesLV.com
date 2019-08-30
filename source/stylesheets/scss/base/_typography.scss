@@ -1,0 +1,29 @@
+// Fonts
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+// Headings
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: "Roboto", sans-serif;
+  }
+}
+// text decoration
+.t-dec-none {
+  text-decoration: none;
+}
+// Fit Text
+.fit-text {
+  font-size: calc(3vw + 1rem);
+}
+// Large Text
+.lg-text {
+  font-size: 1.75em;
+  line-height: 1.6;
+}
+
+.md-text {
+  font-size: 1.35em;
+  line-height: 1.6;
+}

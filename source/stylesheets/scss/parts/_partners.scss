@@ -1,0 +1,29 @@
+.svg-partners-wrap {
+  width: 33.333333333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  align-items: stretch;
+
+  .svg-partners {
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    padding: 1em;
+    align-items: center;
+    box-shadow: 0 3px 7px 0px #757575;
+    svg {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+  @include break(not-small) {
+    width: 16.666666667%;
+  }
+  @include mobilebreak(is-mobile) {
+    width: 50%;
+  }
+}

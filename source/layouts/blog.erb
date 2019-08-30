@@ -1,0 +1,20 @@
+<%# I think this is not being used? %>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= partial "partials/site/meta" %>
+    <title><%= current_page.data.title || "We Save Homes" %>  <% if paginate && prev_page && num_pages > 1 %>-  Page <%= page_number %><% end %></title>
+    <%= stylesheet_link_tag "style.css?v=" + data.site.version_number  %>
+    <%# = javascript_include_tag "script" %>
+     <%= partial "partials/site/scripts" %>
+  </head>
+  <body class="body">
+    <%= partial "partials/nav" %>
+        <%= yield %>
+    <%= partial "partials/footer" %>
+    <%= partial "partials/after-footer" %>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<div class="flex justify-center flex-column w-100 pv4 ph2 email-wrap">
+    <div>
+        <form method="post" enctype="text/plain" id="support-Form" class="relative">
+            <%#  %>
+            <div class="mb3">
+                <label for="name" class="f4 b db mb1 fw5 email-label">
+                    Name
+                </label>
+                <input id="name" name="name" placeholder="Jane Smith" class="input-reset ba b--black-20 pa2 mb1 db w-100 outline-0 outline-focus" type="text" aria-describedby="name-desc" data-parsley-errors-container="#form-name" required>
+                <small id="name-desc" class="f6 black-30 mb2 flex justify-between email-help">
+                    <span class="email-help-text">
+                        Please give your full name
+                    </span>
+                    <div id="form-name" class=""></div>
+                </small>
+            </div>
+            <%#  %>
+            <div class="mb3">
+                <label for="email" class="f4 b db mb1 fw5 email-label">
+                    Email Address
+                </label>
+                <input id="email" name="email" placeholder="Your email address: ie <%=data.site.site_email  %>" class="input-reset ba b--black-20 pa2 mb1 db w-100 outline-0 outline-focus" type="email" aria-describedby="email-desc" data-parsley-errors-container="#form-email" required>
+                <small id="email-desc" name="email-desc" class="f6 black-30 mb2 flex justify-between email-help">
+                    <span class="email-help-text">
+                        This is so we can contact you
+                    </span>
+                    <div id="form-email" class=""></div>
+                </small>
+            </div>
+            <%#  %>
+            <div class="mb3">
+                <label for="phone" class="f4 b db mb1 fw5 email-label">
+                    Phone Number
+                </label>
+                <input id="phone" name="phone" placeholder="Your phone number: ie <%=data.site.site_phone  %>" class="input-reset ba b--black-20 pa2 mb1 db w-100 outline-0 outline-focus" type="text" aria-describedby="phone-desc" data-parsley-errors-container="#form-phone" required>
+                <small id="phone-desc" name="phone-desc" class="f6 black-30 mb2 flex justify-between email-help">
+                    <span class="email-help-text">
+                        This is so we can contact you
+                    </span>
+                    <div id="form-phone" class=""></div>
+                </small>
+            </div>            
+            <%#  %>
+            <div class="mb3">
+                <label for="address" class="f4 b db mb1 fw5 email-label">
+                    Your home address
+                </label>
+                <textarea placeholder="123 N Elm St. , Las Vegas Nevada 90113" id="address" name="address" class="db border-box hover-black w-100 ba b--black-20 pa2 br2 mb2 outline-0 outline-focus" aria-describedby="address-desc"  data-parsley-errors-container="#form-address" required></textarea>
+                <small id="address-desc" class="f6 black-30 mb2 flex justify-between email-help">
+                    <span class="email-help-text">
+                        Be as address as possible. 
+                    </span>
+                    <div id="form-address" class=""></div>
+                </small>
+            </div>
+            <%#  %>
+            <div class="mb3">
+                <label for="detailed" class="f4 b db mb1 fw5 email-label">
+                    Any additional information you think we should know. 
+                </label>
+                <textarea id="detailed" name="detailed" class="db border-box hover-black w-100 ba b--black-20 pa2 br2 mb2 outline-0 outline-focus" aria-describedby="detailed-desc"  data-parsley-errors-container="#form-detailed" required></textarea>
+                <small id="detailed-desc" class="f6 black-30 mb2 flex justify-between email-help">
+                    <span class="email-help-text">
+                        Be as detailed as possible. 
+                    </span>
+                    <div id="form-detailed" class=""></div>
+                </small>
+            </div>
+            <%#  %>
+            <%#  %>
+            <input id="user_id" placeholder="345355" class="dn" type="text" aria-describedby="name-user_id" data-parsley-errors-container="#form-user_id">
+            <%#  %>
+            <div class="mb3 tr email-submit">
+                <button class="btn btn-s pv2 ph4 nowrap">
+                    Submit 
+                </button>
+            </div>
+            <%#  %>
+            <div class="form-thank-you">
+                <span style="transition: transform .333s;  transform: scale(0);"></span>
+            </div>
+        </form>
+    </div>
+</div>

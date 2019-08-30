@@ -1,0 +1,49 @@
+// height
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.min-h-25vh {
+  min-height: 25vh;
+}
+
+.min-h-250 {
+  min-height: 250px;
+}
+.max-h-250 {
+  max-height: 250px;
+}
+.max-h-350 {
+  max-height: 350px;
+}
+.max-h-50 {
+  max-height: 50px;
+}
+
+// Line Heigth
+
+// POSITIONING
+.sticky {
+  position: sticky;
+}
+//
+.bottom-3 {
+  bottom: 3rem;
+}
+
+.mt-n7 {
+  margin-top: -7em;
+}
+// Skin
+.bg-darked-red-hv:hover {
+  background-color: darken($dark-red, 10%);
+}
+.white-hv:hover {
+  color: white;
+}
+.attachment-fixed {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

@@ -1,0 +1,59 @@
+.icon {
+  // Size
+  &.icon-small {
+    width: 1em;
+    height: 1em;
+    svg,
+    img {
+      width: 1em;
+      height: 1em;
+    }
+  }
+  &.icon-h40 {
+    svg,
+    img {
+      height: 40px;
+    }
+  }
+  &.icon-50 {
+    svg,
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  &.icon-h100 {
+    svg,
+    img {
+      height: 100px;
+    }
+  }
+  // Color
+  &.icon-light {
+    svg {
+      fill: white;
+    }
+  }
+}
+.icon-100-auto {
+  img,
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+.icon-md-auto {
+  img,
+  svg {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+  }
+}
+.icon-max-content {
+  img,
+  svg {
+    height: max-content;
+    width: max-content;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="wrap">
+    <div class="flex flex-wrap justify-between mv4">
+        <div class="w-100">
+            <h2 class="tc">
+                Latest News
+            </h2>
+        </div>
+        <% blog.articles[0...3].each do |article| %>
+            <article class="w-100 w-30-ns">
+                <div class="ma1 ba">
+                    <h3>
+                        <a href="<%= article.url %>"><%= article.title %></a>
+                        <time><%= article.date.strftime('%b %e %Y') %></time>
+                    </h3>
+                    <div style="height: 100px;">
+                        <%= image_tag article.data.img || "/images/logo.png", :class => 'object-cover', :title => article.title %>
+                    </div>
+                    <%= article.summary(100) %>
+                    <a href="<%= article.url %>">Read more</a>                
+                </div>
+            </article>
+        <% end %>
+    </div>
+</div>

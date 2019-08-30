@@ -1,0 +1,42 @@
+<header class="bg-white sticky top-0  pv3 z-3 shadow-1 header">
+  <div class="wrap flex items-center justify-between main-nav-wrap">
+    <%#  %>
+    <div class="dn main-nav-hamburger" data-nav="hamburger">
+      <%= partial "partials/assets/hamburger" %>
+    </div>
+    <%#  %>
+    <div class="icon icon-h40 main-nav-logo">
+      <a href="/" class="flex items-end">
+        <span class="nowrap f3 fw9 blue ml3">
+          <%= data.site.site_name %>
+        </span>
+      </a>
+    </div>
+    <%#  %>
+    <nav class="flex items-center justify-end w-100 pl4 main-nav" data-nav="nav">
+      <div class="flex items-center main-nav-items mr3">
+        <%= current_link_to "About Us", data.links.page_about, class: "mh2 mid-gray fw3 nav-link fw5", title: "About Us", aria_current: "current" %>
+        <%= current_link_to "Consultation", data.links.page_consultation, class: "mh2 mid-gray fw3 nav-link fw5", title: "Free Consultation", aria_current: "current" %>
+        <%= current_link_to "Free Bankruptcy", data.links.page_free_bankruptcy, class: "mh2 mid-gray fw3 nav-link fw5", title: "Free Bankruptcy", aria_current: "current" %>
+        <div class="mobile-nav-show-content dn">
+          <%= current_link_to "FAQs", data.links.page_faq, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "FAQs", aria_current: "current" %>
+          <%= current_link_to "Videos", data.links.page_videos, class: "mh2 mid-gray fw3 nav-link dib mb4", title: "Videos", aria_current: "current" %>
+        </div>
+      </div>
+      <div class="flex items-center main-nav-actions">
+        <%= current_link_to "E-Mail Me", "mailto:" + data.site.site_email, class: "btn btn-d pv2 ph4 mr2 nav-link", title: "Email Us Today" %> 
+        <%= current_link_to "Text Me", "sms:" + data.site.site_phone, class: "btn btn-od pv2 ph4 nav-link", title: "Text Us Today" %>
+        <div class="mobile-nav-show-content dn">
+          <div class="tc pb3">
+            © <%= Date.today.year %> <%= data.site.site_name %> - <%= data.site.site_saying %>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <%#  %>
+    <div class="dn main-nav-action">
+        <%= current_link_to data.site.site_phone, "sms:" + data.site.site_phone, class: "btn btn-od pv2 ph2 nav-link nowrap", title: "Text Us Today" %>
+    </div>
+    <%#  %>
+  </div>
+</header>

@@ -1,0 +1,33 @@
+// Base
+* {
+  box-sizing: border-box;
+}
+//
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  background: $white;
+  font-size: 15px;
+  font-weight: 300;
+  color: $dark-gray;
+  text-rendering: auto;
+}
+a {
+  text-decoration: none;
+  color: $blue;
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+//
+.full-height-section {
+  main {
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

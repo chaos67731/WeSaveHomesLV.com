@@ -1,0 +1,68 @@
+<%= javascript_include_tag "jquery-3.4.1.min" %>
+<%= yield_content :js_file %>
+ <%= javascript_include_tag "parsley.js" %>
+ <%= javascript_include_tag "smtp.js" %>
+<script><%= partial "javascripts/script.js" %></script>
+<%= javascript_include_tag "modernizr.js" %>
+<%# start lazy load %>
+<%= javascript_include_tag "lozad.min.js" %>
+<script type="text/javascript">
+    <%= partial "javascripts/lazy-load-settings.js" %>
+</script>
+<%# end lazy load %>
+<%= yield_content :js %>
+
+<%#  %>
+ 
+ 
+<script type="text/javascript">
+$(function () {
+    // bind parsley to the form
+    $("#support-Form").parsley();
+    // parsley settings 
+    parsleyForm = $('#support-Form').parsley({
+        errorClass: 'ba b--light-red',
+        successClass: 'ba b--black-60',
+        errorsWrapper: '<div class="red"></div>',
+        errorTemplate: '<span></span>',
+    });  
+
+    // on form submit
+    $("#support-Form").on('submit', function(event) {
+        // validate form with parsley.
+        event.preventDefault();
+        $(this).parsley().validate();
+
+        // if this form is valid
+        if ($(this).parsley().isValid()) {
+            // show alert message
+            $('.form-thank-you').css({'height': $('#support-Form').innerHeight()});
+            $('.form-thank-you').addClass("absolute top-0 w-100 bg-white-70 flex items-center justify-center fw9 f1");
+            $('.form-thank-you span').text( 'Thank You');
+            $('.form-thank-you span').css('transform','scaleY(1)');
+            
+            // sSending Emails 
+            const message = {
+                name: document.querySelector("#name").value,
+                email: document.querySelector("#email").value,
+                phone: document.querySelector("#phone").value,
+                address: document.querySelector("#address").value,
+                detailed: document.querySelector("#detailed").value,
+            };
+            Email.send({
+                SecureToken : "dae945fd-9c9e-4db0-90b3-75487f29125e", 
+                To : 'wesavehomes@theseohero.com',
+                From : "riterdesign@gmail.com",
+                Subject : "Email From: " + message.name,
+                Body :  "<b>Name: </b>" + message.name + "<br><br>" + 
+                        "<b>Email: </b>" + message.email + "<br><br>" + 
+                        "<b>Phone: </b>" + message.phone + "<br><br>" + 
+                        "<b>Address: </b>" + message.address  + "<br><br>" + 
+                        "<b>Message: </b>" + message.detailed  
+            }).then(
+                
+            );
+        }
+    });
+});    
+</script>

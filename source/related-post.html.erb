@@ -1,0 +1,22 @@
+---
+pageable: true
+per_page: 12
+---
+<div class="wrap pt4">
+  <div class="flex flex-wrap">
+    <main class="w-100 w-70-ns pr4-ns">
+    <h1>Articles tagged '<%= tagname %>'</h1>
+        <%= partial "partials/blog/basic-small-post" %>
+        <% if paginate %>
+          <div class="flex">
+              <%= partial "partials/blog/blog-paginate" %>
+          </div>
+        <% end %>         
+    </main>
+    <aside class="w-100 w-30-ns">
+      <div class="sticky" style="top:75px;">
+        <%= partial "partials/blog/blog-sidebar-1" %>
+      </div>
+    </aside>        
+  </div>
+</div>

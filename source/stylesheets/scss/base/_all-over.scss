@@ -1,0 +1,78 @@
+// Site
+.body {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+}
+.main {
+  flex: 1;
+}
+.footer {
+}
+
+// Main Wrap
+.wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  &.wrap-md {
+    max-width: 600px;
+  }
+}
+
+// Font size
+.fs-md {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+// Fix On Mobile
+@include break(medium-under) {
+  .full-width-mobile {
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+  }
+}
+@include mobilebreak(is-mobile) {
+  .full-width-mobile {
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+  }
+}
+// Set Max height on image on mobile
+@include break(medium-under) {
+  .max-height-md-mu {
+    max-height: 35vh;
+  }
+}
+
+// bounce
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.75em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bounce {
+  position: relative;
+  animation: bounce 3s infinite;
+}
+// SVG Fit
+.sgv-fit {
+  // padding: 0.5em;
+  svg {
+    width: 100%;
+    height: 100%;
+    max-height: 50px;
+  }
+}
+// Border on hover

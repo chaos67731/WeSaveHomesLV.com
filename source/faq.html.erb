@@ -1,0 +1,38 @@
+---
+title: 	Frequently Asked Questions - We Save Homes 
+lastmod: 2019-07-14
+priority: 0.8
+type: AboutPage
+site_description: "Frequently Asked Questions - We Save Homes"
+---
+<%#  %>
+<%= partial("partials/parts/small-hero", :locals => {   
+    :backgroundImage => "/images/site/home-in-las-vegas.jpg", 
+    :header => "Frequently Asked Questions", 
+    :subHeader => "If we do not answer a question below, feel free to contact us at any time by phone or email."
+}) %>
+<%#  %>
+<%# <%= partial "partials/parts/as-seen-on" %>
+<%#  %>
+<section class="wrap wrap-md">
+    <div class="flex justify-center flex-column w-100 pv4 ph2">
+        <div>
+            <% data.support.support_questions.each do |f| %>
+                <details class="mb3 ph3 pv2">
+                    <summary class="outline-0 pointer fw3 f4"><%= f.question %></summary>
+                    <div class="pl4 pt2 lh-copy">
+                        <%= f.answer %>
+                    </div>
+                </details>
+            <% end %>                 
+        </div>
+    </div>
+</section>
+<%#  %>
+<div class="mb4">
+    <%= partial "partials/home/steps" %>
+</div>
+<%#  %>
+<%= partial "partials/banner/banner01" %>
+ 
+ 

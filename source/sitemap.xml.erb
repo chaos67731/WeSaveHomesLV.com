@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<% sitemap.resources.each do |f| %>
+<%#  %>
+   <% if f.content_type == "text/html; charset=utf-8" %>
+   <%#  %>
+      <% if defined?f.data.sitemap & f.data.sitemap === "false" %>
+      <% else %>
+      <%#  %>
+      <%#  %>
+         <url>
+            <loc><%= data.site.site_url%><%= f.url %></loc>
+            <lastmod><%= f.data.lastmod || "" %></lastmod>
+            <priority><%= f.data.priority || data.site.default_priority  %></priority>
+            <changefreq><%= f.data.changefreq || data.site.default_changefreq  %></changefreq>
+         </url>
+         <% end %>
+   <%#  %>
+   <% end %>
+<%#  %>
+<% end %>
+</urlset>
+ 
