@@ -90,10 +90,10 @@ activate :minify_html do |html|
 end
 
 
-# disable layout
-page ".htaccess.apache", :layout => false
+# # disable layout
+# page ".htaccess.apache", :layout => false
 
-# rename file after build
-after_build do
-  File.rename 'public/htaccess.apache', 'public/.htaccess'
-end
+# # rename file after build
+# after_build do
+#   File.rename 'public/htaccess.apache', '/public/.htaccess'
+# end
