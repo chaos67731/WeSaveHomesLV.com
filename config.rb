@@ -88,3 +88,12 @@ activate :minify_html do |html|
   html.simple_boolean_attributes  = true   # Use simple boolean attributes
   html.preserve_patterns          = nil    # Patterns to preserve
 end
+
+
+# disable layout
+page ".htaccess.apache", :layout => false
+
+# rename file after build
+after_build do
+  File.rename 'public/htaccess.apache', 'public/.htaccess'
+end
