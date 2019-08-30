@@ -20,7 +20,9 @@ bundle exec middleman server
 # Build
 
 ///// middleman
+
 middleman build
+
 bundle exec middleman build
 
 middleman build --verbose
