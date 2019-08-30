@@ -1,6 +1,6 @@
 web:
-  domain: wesavehomesls.com
-  url: https://www.wesavehomesls.com
+  domain: example.com
+  url: http://www.example.com
 
 redirect:
   /old-url.html: /new-url.html

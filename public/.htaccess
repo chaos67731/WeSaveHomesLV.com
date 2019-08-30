@@ -1,12 +1,12 @@
 # MOVE PERMANENTLY
-Redirect 301 /old-url.html https://www.wesavehomesls.com/new-url.html
-Redirect 301 /another/url.html https://www.wesavehomesls.com/new/
-Redirect 301 /old-directory/ https://www.wesavehomesls.com/new-directory/
+Redirect 301 /old-url.html http://www.example.com/new-url.html
+Redirect 301 /another/url.html http://www.example.com/new/
+Redirect 301 /old-directory/ http://www.example.com/new-directory/
 
 # REWRITE - redirect to www. page
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^wesavehomesls.com$
-RewriteRule (.*) https://www.wesavehomesls.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^example.com$
+RewriteRule (.*) http://www.example.com/$1 [R=301,L]
 
 # ERROR DOCUMENTS
 ErrorDocument 401 Unauthorized access
