@@ -42,12 +42,16 @@
             <div class="lh-copy">
               <%= yield %>
             </div>
-            <div class="bt bb mt4">
-              <h4>Author: <%= current_page.data.author || 'We Save Homes' %></h4>
-              <h4>Posted on: <time><%= current_page.date.strftime('%b %e %Y') %></time></h4>
-              <%# <% current_page.tags.each do |tag| %>
-              <%# <%= link_to tag, tag_path(tag) %>
-              <%# <% end %>
+            <div class="shadow-1 mt4 mh4 pa2">
+              <%#  %>
+              <h3 class="mb0 tc">
+                Contact We Save Homes For a Free Consultation
+              </h3>
+              <div class="tc">
+                <%= tag :img, :src => "/images/site/Jesse-Keenan-sm.jpg", :class => "mt4 br-100 loaded", :title=> "Jesse Keenan - We Save Homes in Las Vegas" %>
+              </div>
+              
+              <%= partial "partials/parts/contact_form" %>
             </div>
             <% if defined?current_page.data.comments & current_page.data.comments === "false" %>
             <% else %>

@@ -25,8 +25,26 @@
             <changefreq>weekly</changefreq>
          </url>
          <url>
-            <loc>https://wesavehomeslv.com/blog/coming-soon/</loc>
-            <lastmod>2019-06-25</lastmod>
+            <loc>https://wesavehomeslv.com/blog/free-bankruptcy-las-vegas/</loc>
+            <lastmod>2019-09-09</lastmod>
+            <priority>0.6</priority>
+            <changefreq>monthly</changefreq>
+         </url>
+         <url>
+            <loc>https://wesavehomeslv.com/blog/las-vegas-foreclosures-help/</loc>
+            <lastmod>2019-09-09</lastmod>
+            <priority>0.6</priority>
+            <changefreq>monthly</changefreq>
+         </url>
+         <url>
+            <loc>https://wesavehomeslv.com/blog/best-way-to-prevent-foreclosure-in-las-vegas/</loc>
+            <lastmod>2019-09-09</lastmod>
+            <priority>0.6</priority>
+            <changefreq>monthly</changefreq>
+         </url>
+         <url>
+            <loc>https://wesavehomeslv.com/blog/how-do-you-stop-foreclosure-in-las-vegas/</loc>
+            <lastmod>2019-09-09</lastmod>
             <priority>0.6</priority>
             <changefreq>monthly</changefreq>
          </url>
