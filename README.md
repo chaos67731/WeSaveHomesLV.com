@@ -3,12 +3,15 @@
 npm run start
 
 # From project
+nvm use 8.4.0
+nvm use 12.1.0
+export GEM_HOME="$HOME/.gem"
 
 xcode-select --install
 
-npm install
-
+sudo yarn install
 gem install middleman
+
 
 bundle install
 

@@ -1,0 +1,42 @@
+Arguments: 
+  /Users/james/.nvm/versions/node/v12.1.0/bin/node /opt/homebrew/Cellar/yarn/1.22.17_2/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/james/.nvm/versions/node/v12.1.0/bin:/Users/james/.nvm/versions/node/v17.3.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/james/.nvm/versions/node/v17.3.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  12.1.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/james/Documents/GitHub/WeSaveHomesLV.com/node_modules/abbrev'
+
+npm manifest: 
+  {
+    "name": "wesavehomes",
+    "version": "1.0.0",
+    "description": "Use : live-server",
+    "main": "index.php",
+    "dependencies": {
+      "node-sass": "^4.9.0",
+      "parallelshell": "^3.0.2"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "test",
+      "start": "parallelshell \"node-sass --watch source/stylesheets/scss/style.scss -o source/stylesheets --output-style nested\""
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
